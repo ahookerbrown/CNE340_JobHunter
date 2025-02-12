@@ -48,7 +48,7 @@ def add_new_job(cursor, jobdetails):
 
 # Check if new job
 def check_if_job_exists(cursor, jobdetails):
-    publication_date = jobdetails['publication_date'][0:10]  # Correct key
+    publication_date = jobdetails['publication_date'][0:10]
     query = "SELECT * FROM jobs WHERE Created_at = \"%s\"" % publication_date
     return query_sql(cursor, query)
 
